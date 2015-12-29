@@ -44,15 +44,16 @@
     <Compile Include="BookStoreMain.cs" />
     <Compile Include="Books\Book.cs" />
     <Compile Include="Engine\BookStoreEngine.cs" />
+    <Compile Include="Interfaces\IBook.cs" />
     <Compile Include="Interfaces\IInputHandler.cs" />
     <Compile Include="Interfaces\IRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\ConsoleInputHandler.cs" />
     <Compile Include="UI\ConsoleRenderer.cs" />
-    <Compile Include="UI\ConsoleUserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

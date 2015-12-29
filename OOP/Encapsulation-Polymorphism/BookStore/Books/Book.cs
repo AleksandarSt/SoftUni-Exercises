@@ -1,8 +1,9 @@
 ﻿namespace BookStore.Books
 {
+    using BookStore.Interfaces;
     using System;
 
-    public class Book
+    public class Book:IBook
     {
         private string title;
         private string author;

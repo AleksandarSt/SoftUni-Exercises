@@ -4,16 +4,21 @@
     using System.Collections.Generic;
     using System.Linq;
     using Books;
+using BookStore.Interfaces;
 
     public class BookStoreEngine
     {
-        private readonly List<Book> books;
+        private readonly List<IBook> books;
         private decimal revenue;
+        private readonly IRenderer renderer;
+        private readonly IInputHandler inputHandler;
 
-        public BookStoreEngine()
+        public BookStoreEngine(IRenderer renderer,IInputHandler inputHandler)
         {
+            this.renderer = renderer;
+            this.inputHandler = inputHandler;
             this.IsRunning = true;
-            this.books = new List<Book>();
+            this.books = new List<IBook>();
             this.revenue = 0;
         }
 
@@ -23,7 +28,7 @@
         {
             while (this.IsRunning)
             {
-                string command = Console.ReadLine();
+                string command = this.inputHandler.ReadLine();
 
                 if (string.IsNullOrWhiteSpace(command))
                 {
@@ -34,10 +39,10 @@
 
                 string commandResult = this.ExecuteCommand(commandArgs);
 
-                Console.WriteLine(commandResult);
+                this.renderer.WriteLine(commandResult);
             }
 
-            Console.WriteLine("Total revenue: {0:F2}", this.revenue);
+            this.renderer.WriteLine("Total revenue: {0:F2}", this.revenue.ToString());
         }
 
         private string ExecuteCommand(string[] commandArgs)
@@ -62,7 +67,7 @@
         {
             string title = commandArgs[1];
 
-            Book bookToSell = this.books.FirstOrDefault(book => book.Title == title);
+            IBook bookToSell = this.books.FirstOrDefault(book => book.Title == title);
 
             isBookAvailable(bookToSell);
 
@@ -75,7 +80,7 @@
         {
             string title = commandArgs[1];
 
-            Book bookToRemove = this.books.FirstOrDefault(book => book.Title == title);
+            IBook bookToRemove = this.books.FirstOrDefault(book => book.Title == title);
 
             isBookAvailable(bookToRemove);
 
@@ -84,11 +89,11 @@
             return "Book removed";
         }
 
-        private void isBookAvailable(Book book)
+        private void isBookAvailable(IBook book)
         {
             if (book == null)
             {
-                Console.WriteLine("Book does not exist");
+                this.renderer.WriteLine("Book does not exist");
             }
         }
 

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using Ships;
+    using Battleships.Interfaces;
 
     public class Engine
     {
@@ -61,17 +62,19 @@
                 return "Defending ship is already destroyed.";
             }
 
-            switch (attacker.GetType().Name)
-            {
-                case "AircraftCarrier":
-                    return "We bombed them from the sky!";
-                case "Destroyer":
-                    return "They didn't see us coming!";
-                case "Warship":
-                    return "Victory is ours!";
-                default:
-                    return "Invalid ship type";
-            }
+            //switch (attacker.GetType().Name)
+            //{
+            //    case "AircraftCarrier":
+            //        return "We bombed them from the sky!";
+            //    case "Destroyer":
+            //        return "They didn't see us coming!";
+            //    case "Warship":
+            //        return "Victory is ours!";
+            //    default:
+            //        return "Invalid ship type";
+            //}
+
+            return ((IAttack)attacker).Attack(defender);
         }
     }
 }

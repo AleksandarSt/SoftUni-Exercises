@@ -12,6 +12,11 @@ namespace Battleships.Ships
         {
             return string.Empty;
         }
+
+        protected virtual void DestroyTarget(Ship target)
+        {
+            target.IsDestroyed = true;
+        }
         
     }
 }

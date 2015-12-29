@@ -34,7 +34,7 @@
 
         public override string Attack(Ship targetShip)
         {
-            targetShip.IsDestroyed = true;
+            this.DestroyTarget(targetShip);
 
             return "We bombed them from the sky!";
         }

@@ -33,7 +33,7 @@
 
         public override string Attack(Ship targetShip)
         {
-            targetShip.IsDestroyed = true;
+            this.DestroyTarget(targetShip);
 
             return "They didn't see us coming!";
         }

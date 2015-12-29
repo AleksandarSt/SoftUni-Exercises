@@ -12,7 +12,7 @@
 
         public override string Attack(Ship targetShip)
         {
-            targetShip.IsDestroyed = true;
+            this.DestroyTarget(targetShip);
 
             return "Victory is ours!";
         }

@@ -1,0 +1,6 @@
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\bin\Debug\ExtensionMethods.exe.config
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\obj\Debug\ExtensionMethods.csprojResolveAssemblyReference.cache
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\bin\Debug\ExtensionMethods.exe
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\bin\Debug\ExtensionMethods.pdb
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\obj\Debug\ExtensionMethods.exe
+D:\Git\SoftUni-Exercises\Advanced-C#\Functional-Programing\ExtensionMethods\obj\Debug\ExtensionMethods.pdb

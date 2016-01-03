@@ -181,8 +181,46 @@
                 .Where(student =>student.TeamworkScore == maxTeamScore)
                 .Count();
 
+            //Console.WriteLine(numberOfStudentsWithMaxTeamworkScore);
 
-            Console.WriteLine(numberOfStudentsWithMaxTeamworkScore);
+            /*•	Group the students by the initials of their first names; 
+             * sort the groups alphabetically and print them like the example below.*/
+
+            var gruopedStudents = students
+                .GroupBy(student => student.FirstName.FirstOrDefault())
+                .OrderBy(x => x.Key);
+
+            //foreach (var groupName in gruopedStudents)
+            //{
+            //    Console.WriteLine(groupName.Key);
+            //    foreach (var student in groupName)
+            //    {
+            //        Console.WriteLine("  {0} {1}", student.FirstName, student.LastName);
+            //    }
+            //}
+
+            /*•	Group the students by type (online/on-site) 
+             * and sort them by exam score in descending order.*/
+
+            var studentsByType = students
+                .GroupBy(student => student.StudentType)
+                .Select(type =>
+                        new
+                        {
+                            Name = type.Key,
+                            Students = type.OrderByDescending(x => x.ExamResult)
+                        })
+                  .OrderBy(group => group.Students.First().ExamResult);
+
+            foreach (var type in studentsByType)
+            {
+                Console.WriteLine(type.Name);
+                foreach (var student in type.Students)
+                {
+                    Console.WriteLine("  {0} {1} - {2}", student.FirstName, student.LastName, student.ExamResult);
+                }
+            }
+                                
         }
     }
 }

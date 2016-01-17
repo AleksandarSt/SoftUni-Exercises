@@ -1,0 +1,6 @@
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\bin\Debug\Well-Known-Algorithm.exe.config
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\obj\Debug\Well-Known-Algorithm.csprojResolveAssemblyReference.cache
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\bin\Debug\Well-Known-Algorithm.exe
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\bin\Debug\Well-Known-Algorithm.pdb
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\obj\Debug\Well-Known-Algorithm.exe
+D:\Git\SoftUni-Exercises\High-Quality-Code\Defensive-Programming\Well-Known-Algorithm\obj\Debug\Well-Known-Algorithm.pdb
